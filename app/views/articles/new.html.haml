@@ -1,0 +1,14 @@
+.row
+  .col-xs-8.col-xs-offset-2
+    %h2= "Create article"
+.row
+  .col-xs-8.col-xs-offset-2.well
+    = form_for @article, class: 'form', html: {multipart: true} do |f|
+      .form-group
+        = f.label :title, class: 'form-label required'
+        = f.text_field :title, class: 'form-control'
+      .form-group
+        = f.label :description, class: 'form-label required'
+        = f.text_field :description, class: 'form-control'
+      .form-group
+      = f.submit "save", class: 'btn btn-primary pull-right'
